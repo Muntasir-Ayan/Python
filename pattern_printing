@@ -1,0 +1,293 @@
+# height = float(input())
+# base = float(input())
+# area = 0.5*height*base
+# print(area)
+def calculate_area(height,base,shape=""):
+
+    if(shape =="triangle"):
+        area = 0.5 * height * base
+        return print("Area of triangle: ",area)
+    if(shape =="rectangle"):
+        area = height * base
+        return  print("Area of Rectangle: ",area)
+    else:
+        return print("wrong input")
+
+# calculate_area(10,5,"rectangle")
+"""
+*
+**
+***
+
+"""
+def print_pattern1(value):
+    for i in range(value):
+        s =''
+        for j in range(value):
+            s=s+'*'
+
+        print(s)
+#print_pattern1(3)
+
+"""
+****
+*  *
+*  *
+****
+"""
+
+def print_pattern2(value):
+    for i in range(value):
+        s =''
+
+        for j in range(value):
+            if(i==0 or i==value-1 or j ==0 or j==value-1):
+                s = s+"*"
+            else:
+                s +=" "
+        print(s)
+# print_pattern2(4)
+
+
+"""
+*******
+**   **
+* * * *
+*  *  *
+* * * *
+**   **
+*******
+"""
+
+def print_pattern3(value):
+    for i in range(value):
+        s =''
+        for j in range(value):
+            if(i==0 or i == value-1 or j==0 or j==value-1 or j == value-i or i == j ):
+                s+="*"
+            else:
+                s+=" "
+        print(s)
+# print_pattern3(9)
+
+
+
+"""
+     ******
+    ******
+   ******
+  ******
+ ******
+******
+
+"""
+def print_pattern4(value):
+
+    for i in range(value,0,-1):
+        s = ''
+        for j in range(value -1):
+            s+=" "
+        for k in range(value):
+            s+="*"
+
+        print(s)
+# print_pattern4(6)
+# print("*"*5)
+def print_pattern5(value):
+    for i in range(value):
+        for j in range(value):
+            print("$",end='')
+        print()
+# print_pattern5(5)
+
+
+"""
+*
+* *
+* * *
+* * * *
+"""
+
+def print_pattern6(value):
+    for i in range(value):
+        for j in range(value):
+            print("*",end=' ')
+        print()
+# print_pattern6(5)
+
+def print_pattern7(value):
+    for i in range(value):
+        for j in range(i+1):
+            print("*",end=' ')
+        print()
+
+# print_pattern7(5)
+
+"""
+* * * *
+* * *
+* *
+*
+"""
+def print_pattern8(value):
+    for i in range(value):
+        for j in range(value-i):
+            print("*",end=' ')
+        print()
+# print_pattern8(5)
+
+"""
+      *
+    * *
+  * * *
+* * * *
+"""
+def print_pattern9(value):
+    for i in range(value):
+        for j in range(value-i-1):
+            print(" ",end=' ')
+        for k in range(i+1):
+            print("*",end=' ')
+        print()
+# print_pattern9(5)
+"""
+****
+ ***
+  **
+   *
+"""
+def print_pattern10(value):
+    for i in range(value):
+        for j in range(i):
+            print(" ", end=' ')
+        for k in range(value-i):
+            print("*",end=" ")
+        print()
+# print_pattern10(5)
+
+"""
+   *
+  * *
+ * * *
+* * * *
+"""
+def print_pattern11(value):
+    for i in range(value):
+        for j in range(value-i-1):
+            print(" ",end=' ')
+        for k in range(i+1):
+            print("*",end=' ')
+        for l in range(i):
+            print("*", end=' ')
+        print()
+
+# print_pattern11(5)
+
+"""
+* * * *
+ * * *
+  * *
+   *
+"""
+def print_pattern12(value):
+    for i in range(value):
+        for j in range(i):
+            print(" ", end='')
+        for k in range(i,value):
+            print('*',end=' ')
+        print()
+# print_pattern12(6)
+
+"""
+*       *
+* *   * *
+* * * * *
+* * * * *
+* *   * *
+*       *
+"""
+
+def print_pattern13(value):
+    for i in range(1,value+1):
+        for j in range(i):
+            print('*', end='')
+        space = 2*value-2*i
+        for k in range(space):
+            print(" ",end='')
+        for j in range(i):
+            print('*', end='')
+        print()
+    for i in range(value, 0, -1):
+        for j in range(i):
+            print('*', end='')
+        space = 2 * value - 2 * i
+        for k in range(space):
+            print(" ", end='')
+        for j in range(i):
+            print('*', end='')
+        print()
+
+# print_pattern13(5)
+
+"""
+   * * * *
+  * * * *
+ * * * *
+* * * *
+"""
+
+def print_pattern14(value):
+    for i in range(value):
+        for j in range(value -i -1):
+            print(" ",end='')
+        for k in range(value):
+            print("*",end=" ")
+        print()
+# print_pattern14(5)
+
+
+"""
+   * * * *
+  *     *
+ *     *
+* * * *
+"""
+
+def print_pattern15(value):
+    for i in range(value):
+        for j in range(value - i - 1):
+            print(" ", end='')
+        for k in range(value):
+            if(i==0 or i==value-1 or k==0 or k==value-1):
+                print("*", end=" ")
+            else:
+               print(" ",end=' ')
+        print()
+# print_pattern15(5)
+
+"""
+* * * *
+  * * *
+    * *
+      *
+      *
+    * *
+  * * *
+* * * *
+
+"""
+def print_pattern16(value):
+    for i in range(value):
+        for j in range(i):
+            print(" ", end=' ')
+        for k in range(value-i):
+            print("*",end=' ')
+        print()
+    for i in range(value):
+        for j in range(value - i-1):
+            print(" ", end=' ')
+        for k in range(i+1):
+            print("*", end=' ')
+
+        print()
+print_pattern16(5)
